@@ -19,6 +19,7 @@ custom:
     dockerImage: softprops/lambda-rust
     dockerTag: latest
   layers:
+    # can create your own layer from `runtime-layer`
     - arn:aws:lambda:eu-central-1:898466741470:layer:wasmtime:1
 
 functions:
