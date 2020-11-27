@@ -1,0 +1,16 @@
+service: wasmtime-layer
+
+provider:
+  name: aws
+  # profile: jb-services
+  profile: jb
+  stage: prod
+
+layers:
+  wasmtime:
+    description: "wasmtime WebAssembly system lambda layer."
+    path: bin
+    allowedAccounts:
+      - '*'
+    retain: true
+    licenseInfo: MIT
